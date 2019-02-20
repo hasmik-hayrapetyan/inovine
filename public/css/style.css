@@ -19,11 +19,49 @@ article#wrapper {
 .linkedin_hover:hover .text-black{
 	color: #0077b5;
 }
+.fb_hover:hover .text-black{
+	color: #4267b2;
+}
+.home.menu-link-active-color{
+	color: #31a3dd!important;
+}
+.home:hover{
+	color: #31a3dd !important;
+	opacity: .7;
+}
+.career.menu-link-active-color {
+	color: #e71a64!important;
+}
+.career:hover{
+	color: #e71a64!important;
+	opacity: .7;
+}
+.contact.menu-link-active-color,
+.text_green{
+	color: #cbd63d!important;
+}
+.contact:hover,
+.text_green:hover{
+	color: #cbd63d!important;
+	opacity: .7;
+}
 .header_bg {
-	background-image: url('../images/websiteWeb-bg.png');
 	background-repeat: no-repeat;
     background-size: cover;
 }
+.home_bg{
+	background-image: url('../images/websiteWeb-bg.png');
+}
+.career_bg{
+	background-image: url('../images/careers-bg.png');
+}
+.contact_bg{
+	background-image: url('../images/contact-bg.png');
+}
+.vacancy_bg{
+	background-image: url('../images/vacancy-bg.png');
+}
+
 .letter_space_7{
 	letter-spacing: 7px;
 }
@@ -42,9 +80,34 @@ article#wrapper {
 .line_h_1{
    	line-height: 1.1;
 }
-.grow { transition: all .2s ease-in-out; }
-.grow:hover,
-.anime:hover .grow{ transform: scale(1.2); }
+.grow {
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+.grow:hover{
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+}
+.gm-style-mtc > div,
+.gmnoprint > div,
+.gm-svpc {
+	background-color: #cbd63d !important;
+	color: #fff !important;
+}
+.gm-style-iw.gm-style-iw-c {
+	max-width: 370px!important;
+	border-radius: 0!important;
+}
+#googleMap{
+	height: 400px;
+}
+
 /*@media*/
 
 @media (max-width: 1440px) {
@@ -59,11 +122,22 @@ article#wrapper {
 	}
 
 }
+@media (max-width: 768px) {
+	.gm-style-iw-d {
+		max-width: 300px!important;
+	}
+}
 @media (max-width:400px) {
 	.f-s-40{
 		font-size: 30px;
 	}
 	.f-s-13 {
 		font-size: 13px;
+	}
+}
+
+@media (min-height: 656px) {
+	#googleMap{
+		height: 100%;
 	}
 }

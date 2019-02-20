@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Inovine</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link rel="icon" href="public/images/inovine-favicon.png" type="image/png" sizes="16x16">
+</head>
+
+<body>
+
+<article id="wrapper">
+    <header>
+        <div class="header_bg contact_bg d-flex align-items-center" style="min-height: 45vh;">
+            <div class="container-fluid py-4">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <nav class="navbar navbar-expand p-0">
+                                <div class="navbar-collapse justify-content-center justify-content-sm-center justify-content-md-end justify-content-lg-end" id="header_menu">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item active px-lg-3 px-md-3 px-sm-2 px-1">
+                                            <a class="nav-link home text-white" href="./">Home</a>
+                                        </li>
+                                        <li class="nav-item px-lg-3 px-md-3 px-sm-2 px-1">
+                                            <a class="nav-link career text-white" href="careers.html">Careers</a>
+                                        </li>
+                                        <li class="nav-item px-lg-3 px-md-3 px-sm-2 px-1">
+                                            <a class="nav-link contact menu-link-active-color font-weight-bold" href="contact.html">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <img src="public/images/logo.png" class="logo_width" alt="logo">
+                        </div>
+                        <div class="col-md-12 text-center pt-3">
+                            <p class="text-white f-s-40 mb-0 line_h_1">Grow your career with a growing company.</p>
+                            <p class="text-white mb-0 f-s-13">
+                                Contact us at <a href="mailto:hello@inovine.io" class="text_green">hello@inovine.io</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div id="googleMap" style="width:100%;"></div>
+    </section>
+
+</article>
+
+<script>
+    function initMap() {
+        let map = new google.maps.Map(document.getElementById('googleMap'), {
+            zoom: 17,
+            center: {lat: 40.176760, lng: 44.514747}
+        });
+        let contentString = `<div id="content" class="px-md-4 pt-2">
+                <div id="siteNotice"></div>
+                <h6 id="firstHeading" class="firstHeading text-center mb-0">
+                    Do you want to build your product, MVP, or hire a development team?<br> Or do you simply have a question?<br> Drop us a line.
+                </h6>
+                <div id="bodyContent">
+                    <hr style="border: 1px solid #343434;" class="my-2">
+                    <div class="col-md-12 text-center">
+                        <a href="https://www.linkedin.com/company/inovineteam/about/" class="linkedin_hover d-inline-block" target="_blank">
+				        	<span class="fa-stack fa-md">
+  				        		<i class="fa fa-circle text-black fa-stack-2x"></i>
+  				        		<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+				        	</span>
+                        </a>
+                        <a href="https://www.facebook.com/Inovine-402144417219520/" class="fb_hover d-inline-block" target="_blank">
+				        	<span class="fa-stack fa-md">
+  				        		<i class="fa fa-circle text-black fa-stack-2x"></i>
+  				        		<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+				        	</span>
+                        </a>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <a href="mailto:hello@inovine.io" class="text-black">hello@inovine.io</a>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <p>2/2 Melik Adamyan Street, Yerevan, Armenia</p>
+                    </div>
+                </div>
+            </div>`;
+
+        let infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+
+        let image = 'public/images/inovine-favicon.png';
+        let marker = new google.maps.Marker({
+            position: {lat: 40.176760, lng: 44.514747},
+            map: map,
+            icon: image
+        });
+        infowindow.open(map, marker);
+        marker.addListener('click', function() {
+            infowindow.open(map, marker);
+        });
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIjmqOBZ9jNfyn4GfdIVq69hVBYka7cbw&callback=initMap"></script>
+
+</body>
+
+</html>
