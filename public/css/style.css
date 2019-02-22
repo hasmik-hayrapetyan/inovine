@@ -16,6 +16,9 @@ article#wrapper {
 .text-black {
 	color: #000;
 }
+.text_blue {
+	color: #37a1dc;
+}
 .linkedin_hover:hover .text-black{
 	color: #0077b5;
 }
