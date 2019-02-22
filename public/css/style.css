@@ -94,12 +94,7 @@ article#wrapper {
 	-o-transform: scale(1.2);
 	transform: scale(1.2);
 }
-.gm-style-mtc > div,
-.gmnoprint > div,
-.gm-svpc {
-	background-color: #cbd63d !important;
-	color: #fff !important;
-}
+
 .gm-style-iw.gm-style-iw-c {
 	max-width: 370px!important;
 	border-radius: 0!important;
