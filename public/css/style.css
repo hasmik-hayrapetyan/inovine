@@ -27,26 +27,33 @@ article#wrapper {
 }
 .home.menu-link-active-color{
 	color: #31a3dd!important;
+	border-bottom: 2px solid;
 }
 .home:hover{
 	color: #31a3dd !important;
-	opacity: .7;
+	border-bottom: 2px solid;
 }
 .career.menu-link-active-color {
 	color: #e71a64!important;
+	border-bottom: 2px solid;
 }
 .career:hover{
 	color: #e71a64!important;
-	opacity: .7;
+	border-bottom: 2px solid;
 }
-.contact.menu-link-active-color,
+.contact.menu-link-active-color {
+	color: #cbd63d!important;
+	border-bottom: 2px solid;
+}
 .text_green{
 	color: #cbd63d!important;
 }
-.contact:hover,
+.contact:hover{
+	color: #cbd63d!important;
+	border-bottom: 2px solid;
+}
 .text_green:hover{
 	color: #cbd63d!important;
-	opacity: .7;
 }
 .header_bg {
 	background-repeat: no-repeat;
